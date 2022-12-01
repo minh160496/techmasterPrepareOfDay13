@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Van Minh prepare day11</title>
+    <!--phan link cdn icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- phan cdn google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- link favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32x32.png"
+    />
+
+    <!-- phan link file css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <main id="main">
+        <h1>Day 13: <code> Object</code> trong <code>Javascript</code></h1>
+        <section class="main__item css-transform">
+          <h2>I. Khái quát chung về <code>Object</code></h2>
+          <div class="main__item__content">
+            <h3>Khái niệm</h3>
+            <p>
+              <code>Object</code> cũng giống như các biến nhưng đặc biệt hơn khi
+              nó chứa nhiều các thuộc tính <strong>properties</strong> và phương
+              thức <strong>method</strong> bên trong
+            </p>
+            <h3>Ví dụ</h3>
+            <img src="./assets/img/Screenshot_20221130_094047.png" alt="" />
+          </div>
+        </section>
+
+        <section class="main__item css-transform">
+          <h2>I. Khai báo <code>Object</code> trong <code>Javascript</code></h2>
+          <div class="main__item__content">
+            <ol>
+              <li>
+                <h3>
+                  Khởi tạo bằng trình khởi tạo <code>(initializer Object)</code>
+                </h3>
+                <h3>Ví dụ</h3>
+                <img src="./assets/img/Screenshot_20221130_095403.png" alt="" />
+              </li>
+              <li>
+                <h3>
+                  Khởi tạo thông qua <code>Object contructor</code> bằng cách sử
+                  dụng từ khóa new
+                </h3>
+                <h3>Các bước tiến hành</h3>
+                <ul>
+                  <li>
+                    <h4>
+                      Tạo một hàm khởi tạo (tên hàm viết hoa chữ cái đầu tiên)
+                    </h4>
+                    <img
+                      src="./assets/img/Screenshot_20221130_095549.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <h4>
+                      Khởi tạo đối tượng <code>object</code> thông qua hàm tạo
+                      với từ khóa <code>new</code>
+                    </h4>
+                    <img
+                      src="./assets/img/Screenshot_20221130_100034.png"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </li>
+              <i>
+                Note: Các <code>object </code> được khởi tạo với các thuộc tính
+                và giá trị giống nhau nhưng vẫn là 2 đối tượng hoàn toàn khác
+                nhau (Hiểu đơn giản khi so sánh 02 chiếc xe oto giống hệt nhau
+                nhưng nó vẫn là 2 chiếc xe khác nhau)
+              </i>
+              <br />
+              <i>
+                Lý do: Khi khởi tạo 2 object thì nó sẽ để vào 2 ngăn xếp khác
+                nhau
+              </i>
+              <p>Ví dụ</p>
+              <img src="./assets/img/Screenshot_20221130_101119.png" alt="" />
+            </ol>
+          </div>
+        </section>
+
+        <section class="main__item css-transform">
+          <h2>III.Các thành phần của một <code>Object</code></h2>
+          <div class="main__item__content">
+            <ol>
+              <li>
+                <h3>
+                  <code>Object properties</code> (thuộc tính của đội tượng)
+                </h3>
+                <ul>
+                  <li>
+                    <h4>Khái niệm</h4>
+                    <p>
+                      Một cặp <code>key</code> và <code>value</code> nằm trong
+                      một <code>object</code> được gọi là một
+                      <code>object properties</code>
+                    </p>
+                    <h4>Ví dụ</h4>
+                    <img
+                      src="./assets/img/Screenshot_20221130_102131.png"
+                      alt=""
+                    />
+                    <br />
+                    <i
+                      >Note: <code>propertiesName</code> của mảng là các số
+                      nguyên liên tiếp bắt đầu tư 0</i
+                    >
+                    <br />
+                    <i
+                      ><code>propertiesName</code> có phân biệt chữ hoa và chữ
+                      thường</i
+                    >
+                  </li>
+
+                  <li>
+                    <h4>
+                      Cách truy cập vào properties <code> properties </code> của
+                      một <code>object</code>
+                    </h4>
+                    <ol>
+                      <li>
+                        <h5>Sử dụng cú pháp <code>objectName.key</code></h5>
+                        <h5>Ví dụ</h5>
+                        <img
+                          src="./assets/img/Screenshot_20221130_103032.png"
+                          alt=""
+                        />
+                        <p>
+                          Với cú pháp này ta có thể lấy ra
+                          <code>properties</code> của <code>object</code> hoặc
+                          gán thêm một <code>properties</code> mới cho
+                          <code>object</code>
+                        </p>
+                        <p>Ví dụ: Gán một properties mới cho object</p>
+                        <img
+                          src="./assets/img/Screenshot_20221130_103451.png"
+                          alt=""
+                        />
+                        <i
+                          >Note: Nếu <code>key</code> của
+                          <code>properties</code> là một số thì không truy cập
+                          theo cách này được</i
+                        >
+                      </li>
+                      <li>
+                        <h5>Sử dụng cú pháp <code>objectName[key]</code></h5>
+                        <h5>Ví dụ</h5>
+                        <img
+                          src="./assets/img/Screenshot_20221130_103809.png"
+                          alt=""
+                        />
+                      </li>
+                    </ol>
+                    <i
+                      >Note: Key trong <code>properties</code> có thể là một
+                      biến ở bên ngoài, nhưng khi truy cập đến
+                      <code>properties</code> trong <code>object</code> này ta
+                      chỉ có thể sử dụng cú pháp thứ 2</i
+                    >
+                    <br />
+                    <i>Ví dụ</i> <br />
+                    <img
+                      src="./assets/img/Screenshot_20221130_104151.png"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h3><code>object method</code> (phương thức của đối tượng)</h3>
+                <ul>
+                  <li>
+                    <h4>Khái niệm</h4>
+                    <p>
+                      Một <code>properties</code> có phần <code>value</code> là
+                      một <code>function</code> thì không gọi nó là
+                      <code>properties</code> mà là <code>object method</code>
+                    </p>
+                    <h4>Ví dụ</h4>
+                    <img
+                      src="./assets/img/Screenshot_20221130_104948.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <h4>Cách gọi hàm bên trong <code>object</code></h4>
+                    <p>Sử dụng cú pháp <code>objectName.methodName()</code></p>
+                    <h4>Ví dụ</h4>
+                    <img
+                      src="./assets/img/Screenshot_20221130_105221.png"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </li>
+              <i>
+                <ul>
+                  <li>
+                    <p>
+                      Note: Các <code>object </code>có thể chứa cả các
+                      <code>properties</code> và có cả các <code>method</code>
+                    </p>
+                    <p>Ví dụ</p>
+                    <img
+                      src="./assets/img/Screenshot_20221130_105428.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <p>
+                      Các <code>properties</code> không tồn tại trong một
+                      <code>object</code> khi truy suất đến nó sẽ trả về giá trị
+                      <code>Undefine</code>
+                    </p>
+                    <p>Ví dụ</p>
+                    <img
+                      src="./assets/img/Screenshot_20221130_105836.png"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </i>
+            </ol>
+          </div>
+        </section>
+
+        <section class="main__item css-transform">
+          <h2>IV. <code>Object contructor</code></h2>
+          <div class="main__item__content">
+            <ol>
+              <li>
+                <h3><code>Object contructor</code> là gì</h3>
+                <p>
+                  Là một bản thiết kế được tạo ra để các đối tượng khác có thể
+                  kế thừa và có những thể hiện khác nhau
+                </p>
+              </li>
+              <li>
+                <h3>Các bước tiến hành</h3>
+                <ol>
+                  <li>
+                    <h4>
+                      Khái báo một
+                      <code>function contructor </code> với tên function bắt đầu
+                      bằng một chữ cái in hoa (đây là một bản thiết kế)
+                    </h4>
+                    <img
+                      src="./assets/img/Screenshot_20221201_105545.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <h4>
+                      Khởi tạo các đối tượng kế thừa bản thiết kế có sẵn bằng cú
+                      pháp
+                    </h4>
+                    <img
+                      src="./assets/img/Screenshot_20221201_110253.png"
+                      alt=""
+                    />
+
+                    <h5>
+                      Có thể thêm các key mới vào trong các đối tượng kế thừa mà
+                      không là ảnh hưởng đến đối tượng khác
+                    </h5>
+                    <h5>Ví dụ</h5>
+                    <img
+                      src="./assets/img/Screenshot_20221201_110740.png"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <h4>
+                      Bên trong <code>object contructor</code> có thể là một
+                      <code>function</code> và các object thừa kế cũng có
+                      <code>method</code> này
+                    </h4>
+                    <img
+                      src="./assets/img/Screenshot_20221201_111656.png"
+                      alt=""
+                    />
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="main__item css-transform">
+          <h2>V. <code>Object prototype</code></h2>
+          <div class="main__item__content">
+            <ol>
+              <li>
+                <h3><code>Object prototype</code> là gì</h3>
+                <p>
+                  Tất cả các <code>object</code> được khởi tạo trong
+                  <code>Javascript</code> đều được kế thừa từ một
+                  <code>object contructor</code> nào đó. Các
+                  <code>object</code> được các <code>object</code> khác kế thừa
+                  gọi là <code>object prototype</code>
+                </p>
+              </li>
+              <li>
+                <h3><code>prototype</code> là gì</h3>
+                <p>
+                  Tất cả các <code>properties</code> bên trong
+                  <code>object prototype</code> được gọi là
+                  <code>prototype</code> <code>object contructor</code> nào đó.
+                  Các <code>object</code> được các <code>object</code> khác kế
+                  thừa gọi là <code>object prototype</code>
+                </p>
+              </li>
+              <li>
+                <h3>Chứng minh những điều này</h3>
+                <ol>
+                  <li>
+                    <p>
+                      Khi khởi tạo một <code>object</code> với cú pháp bất kỳ,
+                      tiến hành <code>log</code> đối tượng
+                      <code>object</code> này ra, ta sẽ luôn thấy một thuộc tính
+                      prototype của một <code>object prototype</code> có tên là
+                      <code>Object</code>
+                    </p>
+                    <img
+                      src="./assets/img/Screenshot_20221201_121041.png"
+                      alt=""
+                    />
+                    <img
+                      src="./assets/img/Screenshot_20221201_121153.png"
+                      alt=""
+                    />
+                    <br />
+                    <i
+                      >Trong quá trình duyệt qua các <code>properties</code> của
+                      mảng ta phải chú ý đến các
+                      <code>properties riêng của object đó</code> với các
+                      <code>properties chung</code> nằm trong
+                      <code>prototype</code></i
+                    >
+                  </li>
+                  <li>
+                    <p>
+                      Bây giờ ta <code>log</code> ra đối tượng
+                      <code>Object</code>, ta sẽ thấy nó là một
+                      <code>function contructor</code>
+                    </p>
+                    <img
+                      src="./assets/img/Screenshot_20221201_121757.png"
+                      alt=""
+                    />
+                    <img
+                      src="./assets/img/Screenshot_20221201_121817.png"
+                      alt=""
+                    />
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <h4>
+                  Bây giờ ta muốn thêm một <code>properties</code> vào một
+                  <code>object contructor</code> hoặc một
+                  <code>object prototype</code> phải thông qua
+                  <code>prototype</code> của <code>object prototype</code>
+                </h4>
+                <h4>Ví dụ</h4>
+                <img src="./assets/img/Screenshot_20221201_122417.png" alt="" />
+              </li>
+            </ol>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div>
+      <h1 style="margin-top: 120px">The end./</h1>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
